@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Property Details</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+ :root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --card-2:#f1f3f8;
+  --text:#1b1f2a;
+  --muted:#6b7280;
+  --accent:#582a8f;
+  --border:rgba(0,0,0,0.08);
+  --shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:linear-gradient(180deg,#f8f9fc 0%, #eef1f7 100%);
+  color:var(--text);
+  min-height:100vh;
+  padding:30px 16px;
+}
+
+    .property-container{
+      max-width:1300px;
+      margin:auto;
+    }
+
+    .property-page{
+      background:rgba(255,255,255,0.03);
+      border:1px solid var(--border);
+      border-radius:28px;
+      overflow:hidden;
+      backdrop-filter:blur(16px);
+      box-shadow:var(--shadow);
+    }
+
+    /* =========================
+       GALLERY
+    ========================== */
+
+  .gallery{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  padding:20px;
+  background:#ffffff;
+}
+
+.gallery-main{
+  width:100%;
+  height:650px;
+  object-fit:cover;
+  border-radius:24px;
+}
+
+   .gallery-side{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:16px;
+}
+
+
+ .gallery-image{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+    .gallery-image:hover{
+      transform:scale(1.02);
+      border-color:rgba(255,255,255,0.1);
+    }
+
+    /* =========================
+       PROPERTY INFO
+    ========================== */
+
+    .property-info{
+      padding:40px;
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:30px;
+      background:var(--bg);
+    }
+
+    .left-section,
+    .right-section{
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:28px;
+    }
+
+    .property-title{
+      font-size:clamp(2rem,4vw,3.5rem);
+      font-weight:800;
+      line-height:1.1;
+      margin-bottom:12px;
+      letter-spacing:-2px;
+    }
+
+    .location{
+      color:var(--muted);
+      font-size:15px;
+      margin-bottom:24px;
+    }
+
+    .price{
+      font-size:2.5rem;
+      font-weight:800;
+      color:var(--gold);
+      margin-bottom:20px;
+    }
+
+    .description{
+      color:var(--muted);
+      line-height:1.9;
+      font-size:15px;
+    }
+
+    /* =========================
+       FEATURES
+    ========================== */
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:25px;
+    }
+
+    .feature{
+      background:var(--card-2);
+      border-radius:18px;
+      padding:22px;
+      text-align:center;
+      border:1px solid var(--border);
+    }
+
+    .feature-value{
+      font-size:1.5rem;
+      font-weight:800;
+      color:var(--gold);
+      margin-bottom:6px;
+    }
+
+    .feature-label{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* =========================
+       CONTACT CARD
+    ========================== */
+
+    .contact-card h3{
+      font-size:1.6rem;
+      margin-bottom:14px;
+    }
+
+    .contact-card p{
+      color:var(--muted);
+      line-height:1.8;
+      margin-bottom:28px;
+    }
+
+    .contact-btn{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      width:100%;
+      padding:18px;
+      background:linear-gradient(
+        135deg,
+        #582a8f,
+        #582a8f
+      );
+      color:#fff;
+      text-decoration:none;
+      border-radius:18px;
+      font-weight:700;
+      transition:0.3s ease;
+    }
+
+    .contact-btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 15px 35px rgba(212,175,55,0.35);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+    
+    @media(max-width:950px){
+
+      .gallery{
+        grid-template-columns:1fr;
+      }
+
+      .gallery-main{
+        height:400px;
+      }
+
+      .gallery-side{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .property-info{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+    @media(max-width:650px){
+
+      body{
+        padding:14px;
+      }
+
+      .property-info{
+        padding:20px;
+      }
+
+      .gallery{
+        padding:12px;
+      }
+
+      .gallery-main{
+        height:280px;
+      }
+
+      .gallery-side{
+        grid-template-columns:1fr;
+      }
+
+      .gallery-image{
+        height:200px;
+      }
+
+      .features{
+        grid-template-columns:1fr;
+      }
+
+      .card{
+        padding:22px;
+      }
+
+      .price{
+        font-size:2rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="property-container">
+
+    <!-- YOUR property.js injects content here -->
+    <div id="propertyDetails"></div>
+
+  </div>
+
+  <script src="property.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stella Properties</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+  <div class="logo"><img src="images/logo.png" alt=""></div>
+
+  <nav>
+    <ul id="navLinks">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#listing">Listings</a></li>
+      <li><a href="#">Agent</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Find Your Dream Home</h1>
+    <p>Luxury apartments, beach houses, and modern living spaces across the United States.</p>
+    <a href="#listing"><button>Explore Listings</button></a>
+  </div>
+</section>
+<section class="stats">
+  <div class="stat">
+    <h2>50+</h2>
+    <p>Properties Sold</p>
+  </div>
+  <div class="stat">
+    <h2>100+</h2>
+    <p>Happy Clients</p>
+  </div>
+  <div class="stat">
+    <h2>5+</h2>
+    <p>Years Experience</p>
+  </div>
+</section>
+
+  <div class="container" id="listing">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search location or property..." />
+      <button onclick="filterProperties()">Search</button>
+    </div>
+
+    <div class="grid" id="propertyGrid"></div>
+  </div>
+ <section class="about" id="about">
+  <div class="about-container">
+
+    <div class="about-content">
+      <h2> Meet Robert Cavallido</h2>
+      <p>
+Robert Cavallido is a trusted real estate agent specializing in premium properties across the United States. Focused on delivering high-value real estate opportunities, he helps clients secure exclusive homes and investments with confidence. Known for professionalism and attention to detail, he ensures every transaction is handled with transparency, efficiency, and a strong commitment to client success.
+
+
+      </p>
+
+      <a href="#" class="about-btn">Get in Touch</a>
+    </div>
+ <div class="about-image">
+      <img src="images/Dr_ Robert Cavallido.png" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <h2>What We Offer</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/propertysales.png" alt="Property Sales">
+      <h3>Property Sales</h3>
+      <p>Helping you buy and invest in verified properties.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/rentals.png" alt="Rentals">
+      <h3>Rentals</h3>
+      <p>Find affordable and luxury rental homes quickly.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/consultation.png" alt="Consultation">
+      <h3>Consultation</h3>
+      <p>Expert advice to guide your real estate decisions.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2>What Clients Say</h2>
+
+  <div class="grid">
+
+    <div class="card">
+  <img src="images/man1.png">
+  <p>
+    "Prime Properties handled everything with absolute professionalism.
+    I secured my first investment property in Lagos without stress or hidden issues."
+  </p>
+  <h4>Peter</h4>
+</div>
+
+<div class="card">
+  <img src="images/man2.png" alt="Client">
+  <p>
+    "I was struggling to find a reliable agent until I worked with Prime Properties.
+    They delivered verified listings and closed my deal faster than I expected."
+  </p>
+  <h4>Alex</h4>
+</div>
+
+<div class="card">
+  <img src="images/man3.png" alt="Client">
+  <p>
+    "What stood out for me was transparency and honesty.
+    Prime Properties made the entire home-buying process simple and trustworthy."
+  </p>
+  <h4>Isabella</h4>
+</div>
+
+  </div>
+</section>
+
+<section class="cta">
+
+  <div class="cta-bg bg1"></div>
+  <div class="cta-bg bg2"></div>
+
+  <div class="cta-overlay"></div>
+
+  <div class="cta-content">
+    <h2>Ready to Find Your Property?</h2>
+    <p>Contact Robert today and get verified listings instantly.</p>
+
+    <a href="#" class="btn">
+      Chat on WhatsApp
+    </a>
+  </div>
+
+</section>
+
+<section class="map-section">
+  <h2>Our Location</h2>
+
+  <div class="map-container">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46830151.11795828!2d-119.8093025!3d44.24236485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sng!4v1779369853612!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3><img src="images/logo.png" alt=""></h3>
+      <p>Luxury. Trust. Verified real estate across the United States.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#hero">Home</a>
+      <a href="#listing">Listings</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Prime Property. All rights reserved.</p>
+  </div>
+</footer>
+<!-- LIVE CHAT BUTTON -->
+
+ <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+ <script src="script.js"></script>
+ <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a0e8eee880d091c339726eb/1jp4dslve';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+<style>
+  body {
+  font-family: Arial;
+  background: #f5f5f5;
+  padding: 40px;
+}
+
+.admin-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+}
+
+button {
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}  
+</style>
+<div class="admin-container">
+
+  <h1>Upload Property</h1>
+
+  <form id="propertyForm">
+
+    <input type="text" id="title" placeholder="Property Title" required>
+
+    <input type="text" id="location" placeholder="Location" required>
+
+    <input type="text" id="price" placeholder="Price" required>
+
+    <textarea
+      id="description"
+      placeholder="Description"
+    ></textarea>
+
+    <input
+      type="text"
+      id="features"
+      placeholder="Features separated by commas"
+    >
+
+    <input
+      type="file"
+      id="images"
+      multiple
+      required
+    >
+
+    <button type="submit">
+      Upload Property
+    </button>
+
+  </form>
+
+  <p id="status"></p>
+
+</div>
+
+ <script src="admin.js"></script>
+</body>
+</html>
